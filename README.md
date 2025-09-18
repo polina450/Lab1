@@ -119,6 +119,93 @@ graph TD
     G[/Вывод: n/]
     G --> Z([Конец])
 ```
+### 5. Программа
+```java
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class Main {
+    public static Scanner in = new Scanner(System.in);
+    public static PrintStream out = System.out;
+
+    public static void main(String[] args) {
+        // подаем на вход диаметр отверстия и диаметры бусин
+        int X = in.nextInt();
+        int A = in.nextInt();
+        int B = in.nextInt();
+        int C = in.nextInt();
+        int D = in.nextInt();
+        // счетчик n для подсчета бусин которые проходят через отверстие
+        int n = 0;
+        // сравниваем каждую бусину с отверстием
+        if (A > X) {
+            n = n + 1;
+        }
+        if (B > X) {
+            n = n + 1;
+        }
+        if (C > X) {
+            n = n + 1;
+        }
+        if (D > X) {
+            n = n + 1;
+        }
+        // вывод счетчика
+        out.println(n);
+    }
+}
+```
+### 6. Анализ правильности решения
+
+Программа работает корректно на всем множестве решений с учетом ограничений.
+
+1. Тест на `X = 5`:
+
+    - **Input**:
+        ```
+        3 4 8 6
+        ```
+
+    - **Output**:
+        ```
+        2
+        ```
+
+2. Тест на `X = 1`:
+
+    - **Input**:
+        ```
+        2 3 4 5
+        ```
+
+    - **Output**:
+        ```
+        4
+        ```
+
+3. Тест на `X = 10`:
+
+    - **Input**:
+        ```
+        9 8 7 4
+        ```
+
+    - **Output**:
+        ```
+        0
+        ```
+
+4. Тест на `X = 7`:
+
+    - **Input**:
+        ```
+        8 9 10 1
+        ```
+
+    - **Output**:
+        ```
+        3
+        ```
 
 
 
