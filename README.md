@@ -130,9 +130,7 @@ public class Main {
         int B = in.nextInt();
         int C = in.nextInt();
         int D = in.nextInt();
-        // счетчик n для подсчета бусин которые проходят через отверстие
         int n = 0;
-        // сравниваем каждую бусину с отверстием
         if (A < X) {
             n++;
             if (B < X) {
